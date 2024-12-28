@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|c:\\users\\user\\desktop\\ekasa\\ekasa\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|C:\\Users\\User\\Desktop\\eKasa\\eKasa\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|c:\\users\\user\\desktop\\ekasa\\ekasa\\managerview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|solutionrelative:managerview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|c:\\users\\user\\desktop\\ekasa\\ekasa\\waiterview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|solutionrelative:waiterview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|c:\\users\\user\\desktop\\ekasa\\ekasa\\starting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|solutionrelative:starting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|c:\\users\\user\\desktop\\ekasa\\ekasa\\starting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|solutionrelative:starting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|c:\\users\\user\\desktop\\ekasa\\ekasa\\starting.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|solutionrelative:starting.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|c:\\users\\user\\desktop\\ekasa\\ekasa\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|solutionrelative:users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|c:\\users\\user\\desktop\\ekasa\\ekasa\\waiterview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{209A7684-CEB4-4550-9718-883AC3A767DA}|eKasa.csproj|solutionrelative:waiterview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ManagerView.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\ManagerView.cs",
+              "RelativeDocumentMoniker": "ManagerView.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\ManagerView.cs [Design]",
+              "RelativeToolTip": "ManagerView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-28T02:52:21.903Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Starting.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\Starting.Designer.cs",
+              "RelativeDocumentMoniker": "Starting.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\Starting.Designer.cs",
+              "RelativeToolTip": "Starting.Designer.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAIA1wEIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-28T02:16:13.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Starting.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\Starting.cs",
+              "RelativeDocumentMoniker": "Starting.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\Starting.cs",
+              "RelativeToolTip": "Starting.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-28T01:10:28.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Starting.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\Starting.cs",
+              "RelativeDocumentMoniker": "Starting.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\Starting.cs [Design]",
+              "RelativeToolTip": "Starting.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-28T01:07:13.831Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WaiterView.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\WaiterView.cs",
+              "RelativeDocumentMoniker": "WaiterView.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\WaiterView.cs",
+              "RelativeToolTip": "WaiterView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T19:24:26.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WaiterView.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\WaiterView.cs",
+              "RelativeDocumentMoniker": "WaiterView.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\WaiterView.cs [Design]",
+              "RelativeToolTip": "WaiterView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T19:24:17.345Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\Login.cs",
+              "RelativeToolTip": "Login.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwE0AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T14:33:43.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\Login.cs [Design]",
+              "RelativeToolTip": "Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T17:20:42.844Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\Users.cs",
+              "RelativeDocumentMoniker": "Users.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\eKasa\\eKasa\\Users.cs",
+              "RelativeToolTip": "Users.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T16:51:39.687Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
