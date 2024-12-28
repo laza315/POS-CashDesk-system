@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
+using System.Configuration;
 
 namespace eKasa
 {
@@ -23,7 +24,7 @@ namespace eKasa
 
         static SqlConnection Connection() 
         {
-            string connectionString = @"Data Source=MCGEE;Initial Catalog=eKasa;Integrated Security=True;Trust Server Certificate=True";
+            string connectionString = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
             SqlConnection conn = new SqlConnection(connectionString);
             return conn;
         }

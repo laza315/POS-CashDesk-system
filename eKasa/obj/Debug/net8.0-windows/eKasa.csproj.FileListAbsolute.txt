@@ -60,3 +60,8 @@ C:\Users\User\Desktop\eKasa\eKasa\obj\Debug\net8.0-windows\eKasa.csproj.Up2Date
 C:\Users\User\Desktop\eKasa\eKasa\obj\Debug\net8.0-windows\eKasa.WaiterView.resources
 C:\Users\User\Desktop\eKasa\eKasa\obj\Debug\net8.0-windows\eKasa.Starting.resources
 C:\Users\User\Desktop\eKasa\eKasa\obj\Debug\net8.0-windows\eKasa.ManagerView.resources
+C:\Users\User\Desktop\eKasa\eKasa\obj\Debug\net8.0-windows\eKasa.sourcelink.json
+C:\Users\User\Desktop\eKasa\eKasa\bin\Debug\net8.0-windows\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\eKasa\eKasa\bin\Debug\net8.0-windows\EntityFramework.dll
+C:\Users\User\Desktop\eKasa\eKasa\bin\Debug\net8.0-windows\eKasa.dll.config
+C:\Users\User\Desktop\eKasa\eKasa\obj\Debug\net8.0-windows\eKasa.Migrations.CreateUsers.resources
