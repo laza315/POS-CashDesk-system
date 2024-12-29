@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using System.Configuration;
+using eKasa.Models;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace eKasa
 {
@@ -68,17 +70,29 @@ namespace eKasa
 
                         if (dtable.Rows.Count > 0)
                         {
-                            if (role == "waiter")
+                            int id = (from DataRow dr in dtable.Rows select (int)dr["id"]).FirstOrDefault();
+
+                            Users users = new Users();
+                            string query_for_activity = "UPDATE Users SET is_active = @is_active WHERE id = @id";  
+
+                            using (SqlCommand cmd2 = new SqlCommand(query_for_activity, conn))
                             {
-                                WaiterView waiterview = new WaiterView();
-                                OpenDialog(waiterview);
+                                cmd2.Parameters.AddWithValue("@is_active", 1); 
+                                cmd2.Parameters.AddWithValue("@id", id);  
+
+                                cmd2.ExecuteNonQuery();
+
+                                if (role == "1")
+                                {
+                                    WaiterView waiterview = new WaiterView();
+                                    OpenDialog(waiterview);
+                                }
+                                else if (role == "2")
+                                {
+                                    ManagerView managerview = new ManagerView();
+                                    OpenDialog(managerview);
+                                }
                             }
-                            else if (role == "manager")
-                            {
-                                ManagerView managerview = new ManagerView();
-                                OpenDialog(managerview);
-                            }
-                         
                         }
                         else
                         {

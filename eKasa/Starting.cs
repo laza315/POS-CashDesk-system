@@ -12,12 +12,12 @@ namespace eKasa
 
         private void Iamwaiter_btn_Click(object sender, EventArgs e)
         {
-             DecideWhoYouAre("waiter");
+             DecideWhoYouAre("1");
         }
 
         private void Iammanager_btn_Click(object sender, EventArgs e)
         {
-            DecideWhoYouAre("manager");
+            DecideWhoYouAre("2");
         }
 
         private void DecideWhoYouAre(string role)

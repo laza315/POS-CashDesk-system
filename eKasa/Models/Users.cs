@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace eKasa.Models
 {
-    internal class Users
+    public class Users
     {
         [Key]
         public int Id { get; set; }
@@ -36,7 +36,7 @@ namespace eKasa.Models
         Manager,
         Waiter
     }
-    internal class UsersDBContext : DbContext
+    public class UsersDBContext : DbContext
     {
         public UsersDBContext() : base("DBConnection")
         {
