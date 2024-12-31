@@ -36,12 +36,13 @@ namespace eKasa.Models
         Manager,
         Waiter
     }
-    public class UsersDBContext : DbContext
+    public class AppDBContext : DbContext
     {
-        public UsersDBContext() : base("DBConnection")
+        public AppDBContext() : base("DBConnection")
         {
         }
         public DbSet<Users> Users { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 
 }

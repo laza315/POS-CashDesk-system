@@ -31,6 +31,7 @@
             label1 = new Label();
             Iamwaiter_btn = new Button();
             Iammanager_btn = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -65,17 +66,34 @@
             Iammanager_btn.UseVisualStyleBackColor = true;
             Iammanager_btn.Click += Iammanager_btn_Click;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Red;
+            button1.Location = new Point(918, 26);
+            button1.Name = "button1";
+            button1.Size = new Size(46, 42);
+            button1.TabIndex = 3;
+            button1.Text = "x";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Starting
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._1;
             ClientSize = new Size(990, 713);
+            ControlBox = false;
+            Controls.Add(button1);
             Controls.Add(Iammanager_btn);
             Controls.Add(Iamwaiter_btn);
             Controls.Add(label1);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Starting";
             Text = "Starting";
+            Load += Starting_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -85,5 +103,6 @@
         private Label label1;
         private Button Iamwaiter_btn;
         private Button Iammanager_btn;
+        private Button button1;
     }
 }

@@ -33,7 +33,7 @@
             txt_username = new TextBox();
             txt_password = new TextBox();
             button1_login = new Button();
-            button2_exit = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -58,19 +58,18 @@
             // 
             // txt_username
             // 
-            txt_username.Location = new Point(313, 207);
-            txt_username.Multiline = true;
+            txt_username.Location = new Point(313, 215);
             txt_username.Name = "txt_username";
-            txt_username.Size = new Size(222, 32);
+            txt_username.Size = new Size(222, 23);
             txt_username.TabIndex = 2;
             // 
             // txt_password
             // 
             txt_password.Location = new Point(313, 301);
-            txt_password.Multiline = true;
             txt_password.Name = "txt_password";
-            txt_password.Size = new Size(222, 40);
+            txt_password.Size = new Size(222, 23);
             txt_password.TabIndex = 3;
+            txt_password.KeyDown += txt_password_KeyDown;
             // 
             // button1_login
             // 
@@ -82,30 +81,39 @@
             button1_login.Text = "Login";
             button1_login.UseVisualStyleBackColor = true;
             button1_login.Click += button1_login_Click;
+            //button1_login.KeyDown += button1_login_KeyDown;
             // 
-            // button2_exit
+            // button1
             // 
-            button2_exit.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2_exit.Location = new Point(50, 602);
-            button2_exit.Name = "button2_exit";
-            button2_exit.Size = new Size(98, 34);
-            button2_exit.TabIndex = 5;
-            button2_exit.Text = "Exit";
-            button2_exit.UseVisualStyleBackColor = true;
+            button1.BackColor = Color.Transparent;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Red;
+            button1.Location = new Point(823, 8);
+            button1.Name = "button1";
+            button1.Size = new Size(45, 34);
+            button1.TabIndex = 6;
+            button1.Text = "x";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             BackgroundImage = Properties.Resources._1;
             ClientSize = new Size(882, 686);
-            Controls.Add(button2_exit);
+            ControlBox = false;
+            Controls.Add(button1);
             Controls.Add(button1_login);
             Controls.Add(txt_password);
             Controls.Add(txt_username);
             Controls.Add(label2);
             Controls.Add(label1);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Login";
+            ShowIcon = false;
             Text = "Login";
             ResumeLayout(false);
             PerformLayout();
@@ -118,6 +126,6 @@
         private TextBox txt_username;
         private TextBox txt_password;
         private Button button1_login;
-        private Button button2_exit;
+        private Button button1;
     }
 }

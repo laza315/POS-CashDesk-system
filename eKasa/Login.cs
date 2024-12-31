@@ -11,30 +11,41 @@ using Microsoft.Data.SqlClient;
 using System.Configuration;
 using eKasa.Models;
 using Microsoft.VisualBasic.ApplicationServices;
+using System.Security.Cryptography;
+
+
 
 namespace eKasa
 {
-    public partial class Login : Form
+    static class ConnectMe
     {
-        String role;
-        public Login(string role)
-        {
-            this.role=role;
-            InitializeComponent();
-        }
-
-
-        static SqlConnection Connection() 
+        public static SqlConnection Connection()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
             SqlConnection conn = new SqlConnection(connectionString);
             return conn;
         }
+    }
+    /*
+     * The idea behind this is that there is only one active user per login, although a user can run > 1 .exe file. 
+     * We implement that restriction by having only one user instance instantiated using the Singleton pattern. 
+     * First is the straight-forward approach.
+     */
 
-        public void ClearStatus(List <TextBox> fields)
+    public partial class Login : Form
+    {
+        String role;
+        public Login(string role)
         {
-            foreach (TextBox field in fields) { 
-                     field.Text = string.Empty;
+            this.role = role;
+            InitializeComponent();
+        }
+
+        public void ClearStatus(List<TextBox> fields)
+        {
+            foreach (TextBox field in fields)
+            {
+                field.Text = string.Empty;
             }
         }
 
@@ -46,7 +57,7 @@ namespace eKasa
             this.Show();
         }
 
-        private void button1_login_Click(object sender, EventArgs e)
+        public void LogIn()
         {
             string username = txt_username.Text;
             string user_password = txt_password.Text;
@@ -55,7 +66,7 @@ namespace eKasa
             {
                 string query = $"SELECT * FROM Users WHERE username = @username AND password = @password AND role = @role";
 
-                using (SqlConnection conn = Connection())
+                using (SqlConnection conn = ConnectMe.Connection())
                 {
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -73,12 +84,12 @@ namespace eKasa
                             int id = (from DataRow dr in dtable.Rows select (int)dr["id"]).FirstOrDefault();
 
                             Users users = new Users();
-                            string query_for_activity = "UPDATE Users SET is_active = @is_active WHERE id = @id";  
+                            string query_for_activity = "UPDATE Users SET is_active = @is_active WHERE id = @id";
 
                             using (SqlCommand cmd2 = new SqlCommand(query_for_activity, conn))
                             {
-                                cmd2.Parameters.AddWithValue("@is_active", 1); 
-                                cmd2.Parameters.AddWithValue("@id", id);  
+                                cmd2.Parameters.AddWithValue("@is_active", 1);
+                                cmd2.Parameters.AddWithValue("@id", id);
 
                                 cmd2.ExecuteNonQuery();
 
@@ -108,5 +119,24 @@ namespace eKasa
 
         }
 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void button1_login_Click(object sender, EventArgs e)
+        {
+            LogIn();
+        }
+
+ 
+
+        private void txt_password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LogIn();
+            }
+        }
     }
 }

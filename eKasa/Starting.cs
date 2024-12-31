@@ -12,7 +12,7 @@ namespace eKasa
 
         private void Iamwaiter_btn_Click(object sender, EventArgs e)
         {
-             DecideWhoYouAre("1");
+            DecideWhoYouAre("1");
         }
 
         private void Iammanager_btn_Click(object sender, EventArgs e)
@@ -22,10 +22,19 @@ namespace eKasa
 
         private void DecideWhoYouAre(string role)
         {
-            Login loginForm = new Login(role); 
-            this.Hide(); 
+            Login loginForm = new Login(role);
+            this.Hide();
             loginForm.ShowDialog();
-            this.Show(); 
+        }
+
+        private void Starting_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
