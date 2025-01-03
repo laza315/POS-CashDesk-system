@@ -12,6 +12,7 @@ using System.Configuration;
 using eKasa.Models;
 using Microsoft.VisualBasic.ApplicationServices;
 using System.Security.Cryptography;
+using Microsoft.VisualBasic.Devices;
 
 
 
@@ -34,11 +35,20 @@ namespace eKasa
 
     public partial class Login : Form
     {
+        public string username;
+        public string user_password;
         String role;
+
+
+
+
         public Login(string role)
         {
             this.role = role;
+
             InitializeComponent();
+
+
         }
 
         public void ClearStatus(List<TextBox> fields)
@@ -49,94 +59,45 @@ namespace eKasa
             }
         }
 
-        public void OpenDialog(Form form_instance)
+        public void OpenDialog(Form formInstance)
         {
             this.Hide();
-            ClearStatus([txt_username, txt_password]);
-            form_instance.ShowDialog();
+            ClearStatus(new List<TextBox> { txt_username, txt_password });
+            formInstance.ShowDialog();
             this.Show();
         }
 
-        public void LogIn()
-        {
-            string username = txt_username.Text;
-            string user_password = txt_password.Text;
 
-            try
-            {
-                string query = $"SELECT * FROM Users WHERE username = @username AND password = @password AND role = @role";
-
-                using (SqlConnection conn = ConnectMe.Connection())
-                {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@username", username);
-                        cmd.Parameters.AddWithValue("@password", user_password);
-                        cmd.Parameters.AddWithValue("@role", role);
-
-                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                        DataTable dtable = new DataTable();
-                        sda.Fill(dtable);
-
-                        if (dtable.Rows.Count > 0)
-                        {
-                            int id = (from DataRow dr in dtable.Rows select (int)dr["id"]).FirstOrDefault();
-
-                            Users users = new Users();
-                            string query_for_activity = "UPDATE Users SET is_active = @is_active WHERE id = @id";
-
-                            using (SqlCommand cmd2 = new SqlCommand(query_for_activity, conn))
-                            {
-                                cmd2.Parameters.AddWithValue("@is_active", 1);
-                                cmd2.Parameters.AddWithValue("@id", id);
-
-                                cmd2.ExecuteNonQuery();
-
-                                if (role == "1")
-                                {
-                                    WaiterView waiterview = new WaiterView();
-                                    OpenDialog(waiterview);
-                                }
-                                else if (role == "2")
-                                {
-                                    ManagerView managerview = new ManagerView();
-                                    OpenDialog(managerview);
-                                }
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid credentials or role!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error while logging in: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        private void button1_login_Click(object sender, EventArgs e)
+        private void HandleLogin()
         {
-            LogIn();
+            username = txt_username.Text.Trim();
+            user_password = txt_password.Text.Trim();
+
+            Form selectedForm = role == "1" ? (Form)new WaiterView() : new ManagerView(username);
+
+            Action dialog = () => OpenDialog(selectedForm);
+
+            UserSessionManager.LogUserIn(username, user_password, role, dialog);
         }
 
- 
+        private void button1_login_Click(object sender, EventArgs e)
+        {
+            HandleLogin();
+        }
 
         private void txt_password_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                LogIn();
+                HandleLogin();
             }
         }
     }
+    
 }

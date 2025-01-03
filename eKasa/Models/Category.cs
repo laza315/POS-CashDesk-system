@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace eKasa.Models
@@ -16,6 +17,6 @@ namespace eKasa.Models
 
         public string Name { get; set; }
 
+        public virtual ICollection<Article> Articles { get; set; }
     }
-
 }

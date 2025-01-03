@@ -54,6 +54,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "WaiterView";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "WaiterView";
             ResumeLayout(false);
         }

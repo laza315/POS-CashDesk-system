@@ -92,6 +92,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Starting";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Starting";
             Load += Starting_Load;
             ResumeLayout(false);
